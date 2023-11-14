@@ -32,8 +32,10 @@ spec:
       requests:
         cpu: "250m"
         memory: "512M"
+    #Enable the Proetheus plugin
+    enableMetricsPlugin: true
   # Enabling Broker console access
   console:
-    expose: true        
+    expose: true
 
 # 
