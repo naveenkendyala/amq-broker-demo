@@ -38,7 +38,7 @@ public class MessageProducer implements Runnable {
     public void run() {
         try (JMSContext context = connectionFactory.createContext(JMSContext.AUTO_ACKNOWLEDGE)) {
             String randomNumber = Integer.toString(random.nextInt(100));
-            context.createProducer().send(context.createQueue("prices"), randomNumber);
+            context.createProducer().send(context.createQueue("demoqueue"), randomNumber);
             System.out.println("Message Created With Random Content=["+randomNumber+"]");
         }
     }
